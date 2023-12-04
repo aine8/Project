@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const box = Array.from(document.querySelectorAll('.box'));
+    const box = Array.from(document.querySelectorAll('.Box'));
     const displayofPlayer = document.querySelector('.display-player');
     const winnerDisplay = document.querySelector('.winner');
     const restartButton = document.getElementById('Restart');
