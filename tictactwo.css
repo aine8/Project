@@ -4,54 +4,116 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Itim', cursive;
     text-align: center;
     margin: 20px;
-}
-
-
-h1 {
-    color: #0f0101;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #6dce6d; 
-    color: #1f1d1d;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #498AFB; 
+    background-color: #ff9d9d; 
 }
 
 
 .main-background {
-    background-color: paleturquoise;
+    background-color: #86d1bb; 
     height: 100vh;
     padding-top: 1px;
 }
 
-.title {
-    color: #185900; 
+
+.Title {
+    color: #f82e2e; 
     text-align: center;
     font-size: 40px;
     margin-top: 10%;
 }
 
+
+.PlayerNames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label {
+    color: #4a4a4a; 
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #4a4a4a; 
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+#confirmNames {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f28b82; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#confirmNames:hover {
+    background-color: #ec6a5c; 
+}
+
+
+.Display {
+    color: #4a4a4a; 
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.Tayl {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px; 
+    max-width: 300px;
+}
+
+
+.box {
+    border: 1px solid #4a4a4a;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #b45f5f; 
+}
+
+
+.playerX {
+    color: #78fbaf; 
+}
+
+.playerO {
+    color: #829cf2; 
+}
+
+
 .winner {
-    color: #498AFB; 
+    color: #5cec9d; 
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
-    border: 2px solid #000;
+    border: 2px solid #4a4a4a; 
     border-radius: 8px;
     text-align: center;
     font-weight: bold;
@@ -60,44 +122,6 @@ button:hover {
     margin-top: 20px;
 }
 
-.display {
-    color: #200c0c;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.hide {
-    display: none;
-}
-
-.tayl {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(3, 33%);
-    max-width: 300px;
-}
-
-.box {
-    border: 1px solid #a06c6c; 
-    min-width: 100px;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    cursor: pointer;
-}
-
-.playerX {
-    color: #09C372; 
-}
-
-.playerO {
-    color: #498AFB;
-}
 
 .controls {
     display: flex;
@@ -107,18 +131,19 @@ button:hover {
     margin-top: 1em;
 }
 
-button#Restart {
-    color: #000;
+
+#Restart {
+    color: #4a4a4a; 
     padding: 8px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #4a4a4a;
     font-size: 20px;
     margin-left: 1em;
     cursor: pointer;
-    background-color: #6dce6d;
+    background-color: #f28b82; 
     transition: background-color 0.3s ease;
 }
 
-button#Restart:hover {
-    background-color: #498AFB;
+#Restart:hover {
+    background-color: #ec6a5c;
 }
