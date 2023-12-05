@@ -83,15 +83,16 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     
     const changePlayer = () => {
-        displayofPlayer.classList.remove('playerX', 'playerO');
+        displayofPlayer.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        displayofPlayer.innerText = `${currentPlayer === 'X' ? playerXName : playerOName}'s turn`;
+        displayofPlayer.innerText = `Player ${currentPlayer === 'X' ? playerXName : playerOName}`;
         displayofPlayer.classList.add(`player${currentPlayer}`);
     };
     
     const action = (box, index) => {
         if (isValidAction(box) && isGameActive) {
             box.innerText = currentPlayer;
+            box.classList.add(`player${currentPlayer}`);
             updateBoard(index);
             ValidationofResult();
             changePlayer();
@@ -101,20 +102,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const RESTARTBoard = () => {
         box.forEach(tile => {
             tile.innerText = '';
+            tile.classList.remove('playerUNO');
+            tile.classList.remove('playerDOS');
         });
     
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
         winnerDisplay.style.display = 'none';
     
-        displayofPlayer.classList.remove('playerX', 'playerO');
-        changePlayer();
+        if (currentPlayer === 'O') {
+            changePlayer();
+        }
     };
+
+    
 
     confirmNamesButton.addEventListener('click', () => {
         playerXName = document.getElementById('playerXName').value || "Player X";
         playerOName = document.getElementById('playerOName').value || "Player O";
-        displayofPlayer.innerText = `${currentPlayer === 'X' ? playerXName : playerOName}'s turn`;
+        displayofPlayer.innerText = `${currentPlayer === 'X' ? playerXName : playerOName}`;
         document.querySelector('.PlayerNames').classList.add('hide');
     });
     
