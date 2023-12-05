@@ -110,7 +110,6 @@ window.addEventListener('DOMContentLoaded', () => {
         isGameActive = true;
         winnerDisplay.style.display = 'none';
     
-        // Remove the class for the current player before changing
         displayofPlayer.classList.remove(`player${currentPlayer}`);
         changePlayer();
     };
