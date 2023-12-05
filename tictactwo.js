@@ -92,7 +92,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const action = (box, index) => {
         if (isValidAction(box) && isGameActive) {
             box.innerText = currentPlayer;
-            box.classList.add(`player${currentPlayer}`);
             updateBoard(index);
             ValidationofResult();
             changePlayer();
@@ -102,7 +101,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const RESTARTBoard = () => {
         box.forEach(tile => {
             tile.innerText = '';
-            tile.classList.remove('playerUNO', 'playerDOS');
         });
     
         board = ['', '', '', '', '', '', '', '', ''];
