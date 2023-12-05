@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const changePlayer = () => {
         displayofPlayer.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        displayofPlayer.innerText = `Player ${currentPlayer === 'X' ? playerXName : playerOName}`;
+        displayofPlayer.innerText = `${currentPlayer === 'X' ? playerXName : playerOName}`;
         displayofPlayer.classList.add(`player${currentPlayer}`);
     };
     
@@ -102,8 +102,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const RESTARTBoard = () => {
         box.forEach(tile => {
             tile.innerText = '';
-            tile.classList.remove('playerUNO');
-            tile.classList.remove('playerDOS');
+            tile.classList.remove('playerX');
+            tile.classList.remove('playerO');
         });
     
         board = ['', '', '', '', '', '', '', '', ''];
