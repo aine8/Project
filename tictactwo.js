@@ -83,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     
     const changePlayer = () => {
-        displayofPlayer.classList.remove(`player${currentPlayer}`);
+        displayofPlayer.classList.remove('playerX', 'playerO');
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         displayofPlayer.innerText = `${currentPlayer === 'X' ? playerXName : playerOName}'s turn`;
         displayofPlayer.classList.add(`player${currentPlayer}`);
@@ -102,15 +102,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const RESTARTBoard = () => {
         box.forEach(tile => {
             tile.innerText = '';
-            tile.classList.remove('playerUNO');
-            tile.classList.remove('playerDOS');
+            tile.classList.remove('playerUNO', 'playerDOS');
         });
     
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true;
         winnerDisplay.style.display = 'none';
     
-        displayofPlayer.classList.remove(`player${currentPlayer}`);
+        displayofPlayer.classList.remove('playerX', 'playerO');
         changePlayer();
     };
 
